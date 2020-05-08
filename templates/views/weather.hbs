@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <script src="/js/app.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid center_div">
+            {{>header}}
+
+            <div class="row" style="text-align: center;">
+                <input type="text" placeholder="Enter place" class="form-control place"/>
+                <button type="button" class="btn btn-primary" onclick="getWeatherForecast()">Search</button>
+                <br>
+                <h4><span id="success-message" class="label label-success"></span></h4>
+                <h4><span id="error-message" class="label label-danger" style="text: 15px;"></span></h4>
+            </div>
+
+            {{>footer}}
+        </div>
+    </body>
+</html>

@@ -1,5 +1,3 @@
-console.log('Client side JS loaded');
-
 const getWeatherForecast = function () {
     const location = document.querySelector('input').value;
     const successMessage = document.querySelector('#success-message');

@@ -5,7 +5,7 @@ const getWeatherForecast = function () {
 
     successMessage.textContent = 'Loading...';
     errorMessage.textContent = '';
-    fetch('http://localhost:3000/weatherapi?address=' + location)
+    fetch('/weatherapi?address=' + location)
         .then((res) => {
             res.json().then((data) => {
                 if(data.error){

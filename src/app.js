@@ -10,6 +10,8 @@ const contentDirectory = path.join(__dirname, '../public'); //path for serving s
 const viewsPath = path.join(__dirname, '../templates/views'); //path for serving dynamic pages
 const partialsPath = path.join(__dirname, '../templates/partials'); //path for serving partial pages
 
+const port = process.env.PORT || 3000;
+
 app.set('view engine', 'hbs');
 app.set('views', viewsPath); //in case we provide views in some other folder other than'views' folder
 hbs.registerPartials(partialsPath);
@@ -68,7 +70,6 @@ app.get('*', (req, res) => {
     });
 });
 
-//normal values/json/html content can be sent in the reponse
-app.listen(3000, () => {
-    console.log('Server is listening on port 3000');
+app.listen(port, () => {
+    console.log('Server is listening on port', port);
 });
